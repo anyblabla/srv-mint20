@@ -56,3 +56,6 @@ Ce script permet l'installation automatique d'un thème de fenêtres et d'un th�
 chmod +x srv-mint20-200920v7.sh
 
 sudo ./srv-mint20-200920v7.sh
+
+# Demonstration/Démonstration
+https://youtu.be/5_oHTYhy-ik
