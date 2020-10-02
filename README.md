@@ -27,6 +27,7 @@ This script allows the automatic installation of a window theme and an icon them
 * Arc Theme
 * Papirus Icon Theme
 
+
 Ce script permet l'installation automatique d'un ensemble de logiciels de virtualisation
 * Machines
 * KVM/Virtmanager
