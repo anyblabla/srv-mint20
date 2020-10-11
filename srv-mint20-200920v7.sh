@@ -58,10 +58,14 @@ echo "Installation de VMware-Player-16.0.0-16894299.x86_64.bundle..."
 #
 #
 # Logiciels à partir des dépôts (installations)
-echo "Installations de logiciels (et thème) à partir des dépôts : papirus-icon-theme, arc-theme, htop, nmon, neofetch, gnome-boxes, audacity, kdenlive, clipit, simplescreenrecorder, qemu-kvm, libvirt0, libguestfs-tools, libvirt-daemon-system, virt-manager, virt-viewer, spice-vdagent, gir1.2-spiceclientgtk-3.0, ssh-askpass, bridge-utils..."
-apt install -y papirus-icon-theme arc-theme htop nmon neofetch gnome-boxes audacity kdenlive clipit simplescreenrecorder
+echo "Installations de logiciels (et thème) à partir des dépôts : papirus-icon-theme, arc-theme, htop, nmon, neofetch, audacity, kdenlive, clipit, simplescreenrecorder, qemu, qemu-kvm, libvirt0, virt-manager, libguestfs-tools, ssh-askpass, bridge-utils, gnome-boxes..."
+apt install -y papirus-icon-theme arc-theme htop nmon neofetch audacity kdenlive clipit simplescreenrecorder
 apt install -y -o 'apt::install-recommends=true' \
-  libguestfs-tools libvirt-daemon-system virt-manager virt-viewer spice-vdagent gir1.2-spiceclientgtk-3.0 ssh-askpass bridge-utils
+  qemu qemu-kvm libvirt0 virt-manager libguestfs-tools ssh-askpass bridge-utils gnome-boxes
+#  
+echo "KVM ajouts groupes..."
+usermod -G kvm -a $SUDO_USER
+usermod -G libvirt -a $SUDO_USER
 #
 #
 # Suppression + Nettoyage
