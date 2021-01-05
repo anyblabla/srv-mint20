@@ -33,9 +33,9 @@ echo " Ajout de la clé d'authentification et du dépôt supplémentaire virtual
 wget -q -O- http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | apt-key add -
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian eoan contrib" | tee /etc/apt/sources.list.d/virtualbox.list
 #
-echo "Téléchargement de VMware-Player-16.0.0-16894299.x86_64.bundle + rendre éxécutable..."
-wget ftp://services.anyathome.be/linux/soft/bundle/vmware/player-workstation/VMware-Player-16.0.0-16894299.x86_64.bundle
-chmod +x VMware-Player-16.0.0-16894299.x86_64.bundle
+echo "Téléchargement de VMware-Player-16.1.0-17198959.x86_64.bundle + rendre éxécutable..."
+wget ftp://services.anyathome.be/linux/soft/bundle/vmware/player-workstation/VMware-Player-16.1.0-17198959.x86_64.bundle
+chmod +x VMware-Player-16.1.0-17198959.x86_64.bundle
 #
 echo "Rafraîchissement dépôts..."
 apt update
@@ -53,8 +53,8 @@ echo "VirtualBox ajouts groupes..."
 usermod -G vboxusers -a $SUDO_USER
 usermod -G disk -a $SUDO_USER
 #
-echo "Installation de VMware-Player-16.0.0-16894299.x86_64.bundle..."
-./VMware-Player-16.0.0-16894299.x86_64.bundle
+echo "Installation de VMware-Player-16.1.0-17198959.x86_64.bundle..."
+./VMware-Player-16.1.0-17198959.x86_64.bundle
 #
 #
 # Logiciels à partir des dépôts (installations)
@@ -69,7 +69,7 @@ usermod -G libvirt -a $SUDO_USER
 #
 #
 # Suppression + Nettoyage
-echo "Suppression de VMware-Player-16.0.0-16894299.x86_64.bundle et du pack d'extension USB VirtualBox..."
+echo "Suppression de VMware-Player-16.1.0-17198959.x86_64.bundle et du pack d'extension USB VirtualBox..."
 rm *.bundle *.vbox-extpack
 #
 echo "Nettoyage..."
